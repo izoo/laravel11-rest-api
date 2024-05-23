@@ -88,8 +88,8 @@ class ProductController extends Controller
         ];
         DB::beginTransaction();
         try {
-            $product = $this->productRepositoryInterface->update($updateDetails, $product->id);
-            DB::commit();
+             $this->productRepositoryInterface->update($updateDetails,$);
+             DB::commit();
             return ApiResponseClass::sendResponse('Product Update Successful',201);
         } catch (\Exception $e) {
             return ApiResponseClass::rollback($e);
