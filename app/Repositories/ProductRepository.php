@@ -38,4 +38,5 @@ class ProductRepository
     {
         $product = Product::findOrFail($id);
         $product->delete();
+    }
 }
